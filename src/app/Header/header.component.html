@@ -1,0 +1,55 @@
+<div class="heading">
+    
+   <form [formGroup]="userForm">
+    <select formControlName="userId">
+      <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+    </select>
+  </form>
+  </div>
+
+  <div>
+    <div class="backgroundphoto">
+  
+    </div>
+    <div class="profilephoto">
+        <img src="./assets/crystal.jpg"  alt="" class="profilepicture">
+    </div>
+    <div class="namediv">
+      <h2>{{ user?.name }}</h2>
+      <p>{{ '@' + user?.username }}</p>
+      <p>{{ user?.website }}</p>
+      <p>{{ user?.company?.catchPhrase }}</p>
+      <p class="user-city">{{ '📍' + user?.address?.city }}</p>
+    </div>
+  </div>
+
+  <div class="posts-comments">
+  <div *ngFor="let post of posts" class="post" (click)="HeaderService.setCurrentPost(post.id)">
+    <img src="assets/crystal.jpg" alt="Profile Photo" class="profilepictureposts">
+    <div class="post-info">
+      <h3>{{ userName }}</h3>
+      <p>{{ post.body }}</p>
+      <div>
+        <span class="icon">💬 200</span>
+        <span class="icon">🔁 200</span>
+        <span class="icon">❤️ 200</span>
+      </div>
+    </div>
+  </div>
+  
+  <h3>Post {{ postId }} Comments</h3>
+  <div *ngFor="let comment of comments" class="comment">
+    <img src="assets/crystal.jpg" alt="Profile Photo" class="profilepictureposts">
+    <div class="comment-info">
+      <h4>{{ comment.name }}</h4>
+      <p>{{ comment.body }}</p>
+      <div>
+        <span class="icon">💬 0</span>
+        <span class="icon">🔁 0</span>
+        <span class="icon">❤️ 0</span>
+      </div>
+    </div>
+</div>
+  </div>
+
+  

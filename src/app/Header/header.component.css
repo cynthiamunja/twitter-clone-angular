@@ -1,0 +1,54 @@
+.container{
+
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+.header{
+    margin-left: 80%;
+}
+.backgroundphoto{
+    background-image: url(dolphins.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    color: white;
+    position: relative;
+    margin-top: 30px;
+}
+.profilepicture {
+height: 100px;
+width: 100px;
+border-radius: 50%;
+}
+.profilephoto{
+    position: absolute;
+    top: 250px;
+}
+
+
+
+.profilepictureposts{
+    width: 100px;
+    height: 100px;
+}
+
+.otherposts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+.namediv{
+    margin-top: 100px;
+}
+.posts-comments{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    
+}
+
+
+
